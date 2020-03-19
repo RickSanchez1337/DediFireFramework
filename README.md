@@ -1,5 +1,5 @@
 # DediFireFramework
-
+for the people getting issues download the zip file: 
 
 We leaked this to the users from ca-rp who pay developers for there work here is there code for free :)
 
