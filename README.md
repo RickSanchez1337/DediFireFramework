@@ -1,5 +1,5 @@
 # DediFireFramework
-for the people getting issues download the zip file: 
+for the people getting issues download the zip file: https://github.com/RickSanchez1337/DediFireFramework/blob/master/dedifire-source-master%20(1).zip
 
 We leaked this to the users from ca-rp who pay developers for there work here is there code for free :)
 
