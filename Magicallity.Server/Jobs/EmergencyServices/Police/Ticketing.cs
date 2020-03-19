@@ -53,7 +53,7 @@ namespace Magicallity.Server.Jobs.EmergencyServices.Police
                 JobHandler.SendJobAlert(JobType.Police, "[Info]", $"{cmd.Session.GetCharacterName()} paid the ticket", ConstantColours.Info);
                 Server.Get<PaymentHandler>().PayForItem(cmd.Session, ticketAmount, "paying ticket", (int)PaymentType.Debit);
 
-                MySQL.execute("INSERT INTO gta_player_data.player_tickets (`reason`, `amount`, `issuing_officer`, `game_character_id`) VALUES (@reason, @amount, @officer, @charid)", new Dictionary<string, dynamic>
+                MySQL.execute("INSERT INTO player_tickets (`reason`, `amount`, `issuing_officer`, `game_character_id`) VALUES (@reason, @amount, @officer, @charid)", new Dictionary<string, dynamic>
                 {
                     {"@reason", cmd.Session.GetServerData("Character.Ticket.Reason", "") },
                     {"@amount", ticketAmount },

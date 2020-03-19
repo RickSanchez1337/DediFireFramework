@@ -180,7 +180,7 @@ namespace Magicallity.Server.Jobs.EmergencyServices.Police
                 JobHandler.SendJobAlert(JobType.EMS | JobType.Police, "[INFO]", $"{targetPlayer.GetGlobalData("Character.FirstName", "")} {targetPlayer.GetGlobalData("Character.LastName", "")} has put in jail for {timeToJail} months for {arrestReason}", ConstantColours.Red);
             }
 
-            MySQL.execute("INSERT INTO gta_player_data.player_arrests (`reason`, `time`, `arresting_officer`, `game_character_id`) VALUES (@reason, @time, @officer, @charid)", new Dictionary<string, dynamic>
+            MySQL.execute("INSERT INTO player_arrests (`reason`, `time`, `arresting_officer`, `game_character_id`) VALUES (@reason, @time, @officer, @charid)", new Dictionary<string, dynamic>
             {
                 {"@reason", arrestReason },
                 {"@time", timeToJail },
@@ -348,7 +348,7 @@ namespace Magicallity.Server.Jobs.EmergencyServices.Police
                 DoFriskOnPlayer(cmd.Session, closePlayer.ServerID);
             }   
 #else
-            //cmd.Player.TriggerEvent("Search.FindSearchTarget");     
+           //cmd.Player.TriggerEvent("Search.FindSearchTarget");     
 #endif
         }
 

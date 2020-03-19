@@ -46,11 +46,11 @@ namespace Magicallity.Server.Housing
             server.RegisterEventHandler("Player.OnInteraction", new Action<Player>(OnInteraction));
            // server.RegisterEventHandler("Housing.CheckCanStoreVeh", new Action<Player>(OnAttemptStoreVehicle));
             CommandRegister.RegisterCommand("showhouse|showhouses", OnShowHouse);
-            //RegisterHousingCommand("enter", OnHouseEnter);
-            //RegisterHousingCommand("exit", OnHouseExit);
-            //RegisterHousingCommand("allow", OnAllowEntry);
-            //RegisterHousingCommand("disallow", OnDisallowEntry);
-            //RegisterHousingCommand("buy", OnBuyCommand);
+            RegisterHousingCommand("enter", OnHouseEnter);
+            RegisterHousingCommand("exit", OnHouseExit);
+            RegisterHousingCommand("allow", OnAllowEntry);
+            RegisterHousingCommand("disallow", OnDisallowEntry);
+            RegisterHousingCommand("buy", OnBuyCommand);
             RegisterHousingCommand("sell", OnSellCommand);
 
             CommandRegister.RegisterCommand("house", cmd =>

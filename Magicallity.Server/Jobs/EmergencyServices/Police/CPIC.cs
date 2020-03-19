@@ -24,7 +24,7 @@ namespace Magicallity.Server.Jobs.EmergencyServices.Police
         {
             var firstName = cmd.GetArgAs(0, "").ToLower();
             var lastName = cmd.GetArgAs(1, "").ToLower();
-            var query = new Query<List<dynamic>>("SELECT a.FirstName, a.LastName, a.Bill, (SELECT count(*) from gta_player_data.player_arrests c WHERE c.game_character_id = a.CharID) as arrests, (SELECT count(*) from gta_player_data.player_tickets d WHERE d.game_character_id = a.CharID) as tickets, a.CharID, a.Home, (SELECT count(*) FROM mdt_data.want_warrant e WHERE e.game_character_id = a.CharID and e.serve_time is null) as warrants, b.cautioncodes FROM character_data a left outer join mdt_data.cautioncode b on b.game_character_id = a.CharID" /*WHERE lower(FirstName) = @first AND lower(LastName) = @last"*/, new Dictionary<string, dynamic>
+            var query = new Query<List<dynamic>>("SELECT a.FirstName, a.LastName, a.Bill, (SELECT count(*) from player_arrests c WHERE c.game_character_id = a.CharID) as arrests, (SELECT count(*) from player_tickets d WHERE d.game_character_id = a.CharID) as tickets, a.CharID, a.Home, (SELECT count(*) FROM mdt_data.want_warrant e WHERE e.game_character_id = a.CharID and e.serve_time is null) as warrants, b.cautioncodes FROM character_data a left outer join mdt_data.cautioncode b on b.game_character_id = a.CharID" /*WHERE lower(FirstName) = @first AND lower(LastName) = @last"*/, new Dictionary<string, dynamic>
             {
                 {"lower(FirstName)", firstName},
                 {"lower(LastName)", lastName},

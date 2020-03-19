@@ -37,7 +37,7 @@ namespace Magicallity.Server.Jobs.EmergencyServices.Police
 
             targetUser.SetGlobalData("Character.Bill", targetUser.GetGlobalData("Character.Bill", 0) + billAmount);
 
-            MySQL.execute("INSERT INTO gta_player_data.player_tickets (`reason`, `amount`, `issuing_officer`, `game_character_id`) VALUES (@reason, @amount, @officer, @charid)", new Dictionary<string, dynamic>
+            MySQL.execute("INSERT INTO player_tickets (`reason`, `amount`, `issuing_officer`, `game_character_id`) VALUES (@reason, @amount, @officer, @charid)", new Dictionary<string, dynamic>
             {
                 {"@reason", billReason },
                 {"@amount", billAmount },
