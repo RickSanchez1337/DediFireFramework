@@ -1,16 +1,4 @@
-# DediFireFramework
-for the people getting issues download the zip file: https://github.com/RickSanchez1337/DediFireFramework/blob/master/dedifire-source-master%20(1).zip
 
-We leaked this to the users from ca-rp who pay developers for there work here is there code for free :)
-
-Love from Deen, Razor aka RICK , Chocolate!
-We will upload all there server files at some point.
-
-Any support > https://discord.gg/hCtmsyz
-
-
-Jazz#7517 is a scammer :)
-M1keOG#0392 also scammer :)
 
 DATABASE:
 
